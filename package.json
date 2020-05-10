@@ -1,0 +1,36 @@
+{
+  "name": "git-workflow-demo",
+  "version": "1.0.0",
+  "description": "just a demo for git workflow desc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacklovepdf/git-workflow-demo.git"
+  },
+  "author": "jacklin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacklovepdf/git-workflow-demo/issues"
+  },
+  "homepage": "https://github.com/jacklovepdf/git-workflow-demo#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
